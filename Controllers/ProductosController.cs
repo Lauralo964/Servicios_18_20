@@ -38,10 +38,10 @@ namespace Servicios_18_20.Controllers
 
         [HttpPost]
         [Route("Insertar")]
-        public string Insertar([FromBody] PRODucto produto)
+        public string Insertar([FromBody] PRODucto producto)
         {
             clsProducto Producto = new clsProducto();
-            Producto.producto = produto;
+            Producto.producto = producto;
             return Producto.Insertar();
         }
 
