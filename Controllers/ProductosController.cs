@@ -13,7 +13,7 @@ namespace Servicios_18_20.Controllers
     public class ProductosController : ApiController
     { 
         [HttpGet]
-        [Route ]
+        [Route ("ConsultarTodos") ]
         public List<PRODucto> ConsultarTodos()
         { 
             clsProducto Producto = new clsProducto();
@@ -64,7 +64,7 @@ namespace Servicios_18_20.Controllers
 
         [HttpPut]
         [Route("Inactivar")]
-        public string Inactivar([FromBody] int Codigo)
+        public string Inactivar(int Codigo)
         {
             clsProducto Producto = new clsProducto();
             return Producto.ModificarActivo(Codigo, false);
@@ -72,7 +72,7 @@ namespace Servicios_18_20.Controllers
 
         [HttpPut]
         [Route("Activar")]
-        public string Activar([FromBody] int Codigo)
+        public string Activar(int Codigo)
         {
             clsProducto Producto = new clsProducto();
             return Producto.ModificarActivo(Codigo, true);

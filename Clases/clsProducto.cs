@@ -75,7 +75,7 @@ namespace Servicios_18_20.Clases
                 //Se remueve el objeto que se consultó, no el que se pasa en la propiedad de la clase
                 DBSuper.PRODuctoes.Remove(prod);
                 DBSuper.SaveChanges();
-                return "Se actualizo el producto: " + producto.Nombre + " en la base de datos";
+                return "Se elimino el producto: " + prod.Nombre + " en la base de datos";
             }
             catch (Exception ex)
             {
