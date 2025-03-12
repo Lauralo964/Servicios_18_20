@@ -82,6 +82,8 @@ namespace Servicios_18_20.Clases
                 return ex.Message;
             }
         }
+
+        
         public String ModificarActivo (int Codigo, bool activo)
         {
             try
@@ -89,7 +91,7 @@ namespace Servicios_18_20.Clases
                 PRODucto prod = Consultar(Codigo);
                 if (prod == null)
                 {
-                    return "El producto no esat definido en la base de datos";
+                    return "El producto no esta definido en la base de datos";
                 }
                 prod.Activo = activo;
                 DBSuper.SaveChanges();
